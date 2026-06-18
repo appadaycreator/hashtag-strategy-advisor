@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ハッシュタグ戦略診断【無料】SNSのジャンル・規模・フォロワーから最適なハッシュタグ戦略を診断</title>
+<meta name="description" content="ジャンル・規模・フォロワー数から Instagram・Twitter・TikTok向けの効果的なハッシュタグ戦略を無料で診断。個別タグの投稿数・トレンド・最適タイミングも提案。">
+<link rel="canonical" href="https://appadaycreator.com/hashtag-strategy-advisor/lp/">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-TXQGZRF9");</script>
+<!-- End Google Tag Manager -->
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --primary:#1D9BF0;--primary-dark:#1378c4;--accent:#F7630C;--accent-dark:#d8540a;
+  --ink:#0f1722;--muted:#5b6b7c;--line:#e3eaf1;--bg:#f4f8fc;--card:#ffffff;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+
+/* Header */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hdr-in{display:flex;align-items:center;gap:18px;height:64px}
+.logo{display:flex;align-items:center;gap:10px}
+.logo .mark{width:38px;height:38px;border-radius:11px;background:var(--primary);display:flex;align-items:center;justify-content:center;color:#fff;font-size:22px;font-weight:800;box-shadow:0 4px 12px rgba(29,155,240,.35)}
+.logo .nm{font-size:15px;font-weight:800;line-height:1.15}
+.logo .nm small{display:block;font-size:10px;font-weight:600;color:var(--primary);letter-spacing:.04em}
+.nav{margin-left:auto;display:flex;align-items:center;gap:26px}
+.nav a.lnk{font-size:14px;font-weight:600;color:var(--muted)}
+.nav a.lnk:hover{color:var(--primary)}
+.btn-login{font-size:14px;font-weight:700;color:var(--ink)}
+.btn-cta{background:var(--accent);color:#fff;font-weight:800;font-size:14px;padding:11px 20px;border-radius:10px;box-shadow:0 6px 16px rgba(247,99,12,.32);transition:.18s}
+.btn-cta:hover{background:var(--accent-dark);transform:translateY(-1px)}
+.nav .menu{display:flex;gap:26px;align-items:center}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#eaf5ff 0%,#f4f8fc 55%,#fff 100%)}
+.hero:before{content:"";position:absolute;top:-120px;right:-140px;width:420px;height:420px;background:radial-gradient(circle,rgba(29,155,240,.18),transparent 70%);border-radius:50%}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 72px;position:relative}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);color:var(--primary);font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.hero h1{font-size:46px;line-height:1.22;font-weight:900;margin:20px 0 18px;letter-spacing:-.01em}
+.hero h1 .hl{color:var(--primary)}
+.hero p.lead{font-size:16.5px;color:var(--muted);margin-bottom:26px;max-width:520px}
+.stats{display:flex;gap:14px;margin-bottom:30px;flex-wrap:wrap}
+.stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;flex:1;min-width:120px;text-align:center;box-shadow:0 4px 14px rgba(15,23,34,.04)}
+.stat .num{font-size:24px;font-weight:900;color:var(--primary)}
+.stat .num.acc{color:var(--accent)}
+.stat .lbl{font-size:11.5px;color:var(--muted);font-weight:600;margin-top:2px}
+.hero-cta{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.btn-big{background:var(--accent);color:#fff;font-weight:800;font-size:17px;padding:16px 32px;border-radius:13px;box-shadow:0 10px 24px rgba(247,99,12,.34);transition:.18s;display:inline-flex;align-items:center;gap:8px}
+.btn-big:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.note{font-size:12px;color:var(--muted)}
+.note b{color:var(--primary)}
+
+/* Hero visual */
+.hero-vis{position:relative}
+.hero-photo{border-radius:20px;overflow:hidden;box-shadow:0 24px 50px rgba(15,40,80,.18);aspect-ratio:4/3;background:#dce8f2}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.float-card{position:absolute;background:#fff;border-radius:16px;box-shadow:0 16px 40px rgba(15,40,80,.2);overflow:hidden;border:1px solid var(--line)}
+.float-card.top{top:-26px;right:-18px;width:62%}
+.float-card.bot{bottom:-30px;left:-22px;width:54%}
+.float-card img{width:100%}
+
+/* Section */
+.sec{padding:72px 0}
+.sec-head{text-align:center;margin-bottom:46px}
+.sec-tag{font-size:13px;font-weight:800;color:var(--accent);letter-spacing:.08em}
+.sec-head h2{font-size:33px;font-weight:900;margin-top:8px;letter-spacing:-.01em}
+.sec-head p{color:var(--muted);font-size:15px;margin-top:12px}
+
+/* Strengths */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.scard{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 22px rgba(15,23,34,.05);transition:.2s;display:flex;flex-direction:column}
+.scard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(29,155,240,.16)}
+.scard .ph{aspect-ratio:16/10;overflow:hidden;background:#e8f1f9}
+.scard .ph img{width:100%;height:100%;object-fit:cover}
+.scard .bd{padding:22px 20px 26px}
+.scard .ico{width:46px;height:46px;border-radius:12px;background:#eaf5ff;display:flex;align-items:center;justify-content:center;margin:-44px 0 14px;position:relative;border:3px solid #fff;box-shadow:0 6px 16px rgba(29,155,240,.2)}
+.scard h3{font-size:17px;font-weight:800;margin-bottom:9px}
+.scard p{font-size:13.5px;color:var(--muted)}
+.legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:30px}
+.legend span{font-size:12.5px;font-weight:700;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* Steps */
+.steps-wrap{display:grid;grid-template-columns:1.6fr 1fr;gap:36px;align-items:stretch}
+.steps{display:flex;flex-direction:column;gap:18px}
+.step{display:flex;gap:18px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 4px 16px rgba(15,23,34,.04)}
+.step .no{flex:none;width:44px;height:44px;border-radius:50%;background:var(--primary);color:#fff;font-weight:900;font-size:19px;display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px rgba(29,155,240,.3)}
+.step .stxt h4{font-size:16px;font-weight:800;margin-bottom:4px}
+.step .stxt p{font-size:13px;color:var(--muted)}
+.step .simg{flex:none;width:120px;border-radius:10px;overflow:hidden;border:1px solid var(--line);margin-left:auto}
+.cta-box{background:linear-gradient(160deg,#1378c4,#0e5fa0);border-radius:20px;padding:38px 30px;color:#fff;display:flex;flex-direction:column;justify-content:center;box-shadow:0 18px 44px rgba(14,95,160,.4)}
+.cta-box h3{font-size:24px;font-weight:900;line-height:1.4;margin-bottom:10px}
+.cta-box p{font-size:13.5px;opacity:.9;margin-bottom:24px}
+.cta-box .btn-big{background:var(--accent);justify-content:center}
+.cta-box .mini{font-size:11.5px;opacity:.8;margin-top:14px;text-align:center}
+
+/* SNS */
+.sns-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.sns{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px 24px;text-align:center;box-shadow:0 6px 22px rgba(15,23,34,.05)}
+.sns .badge{width:60px;height:60px;border-radius:16px;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:28px;font-weight:800}
+.sns h3{font-size:18px;font-weight:800;margin-bottom:8px}
+.sns p{font-size:13px;color:var(--muted)}
+.sns .tagn{display:inline-block;margin-top:14px;font-size:12px;font-weight:700;color:var(--primary);background:#eaf5ff;padding:5px 12px;border-radius:999px}
+
+/* Gallery strip */
+.gallery{display:grid;grid-template-columns:repeat(8,1fr);gap:10px}
+.gallery img{aspect-ratio:1;object-fit:cover;border-radius:12px;box-shadow:0 4px 12px rgba(15,23,34,.06)}
+
+/* Final CTA */
+.final{background:linear-gradient(135deg,#1D9BF0,#0e5fa0);color:#fff;text-align:center;padding:70px 20px}
+.final h2{font-size:32px;font-weight:900;margin-bottom:14px}
+.final p{opacity:.92;margin-bottom:28px;font-size:15px}
+
+/* Footer */
+footer{background:#0f1722;color:#9fb0c2;font-size:13px;padding:40px 20px;text-align:center}
+footer a{color:#cfe0f0}
+footer .flinks{margin-bottom:10px}
+footer .flinks a{margin:0 8px}
+
+@media(max-width:900px){
+  .hero-in{grid-template-columns:1fr;gap:54px}
+  .grid4{grid-template-columns:repeat(2,1fr)}
+  .steps-wrap{grid-template-columns:1fr}
+  .sns-grid{grid-template-columns:1fr}
+  .gallery{grid-template-columns:repeat(4,1fr)}
+  .hero h1{font-size:36px}
+  .nav .menu{display:none}
+}
+@media(max-width:520px){
+  .grid4{grid-template-columns:1fr}
+  .sec{padding:52px 0}
+  .hero h1{font-size:29px}
+  .sec-head h2{font-size:25px}
+  .step .simg{display:none}
+}
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXQGZRF9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a href="../" class="logo">
+      <span class="mark">#</span>
+      <span class="nm">ハッシュタグ戦略診断<small>AI Hashtag Strategy Advisor</small></span>
+    </a>
+    <nav class="nav">
+      <div class="menu">
+        <a class="lnk" href="#strengths">強み</a>
+        <a class="lnk" href="#steps">使い方</a>
+        <a class="lnk" href="#sns">SNS対応</a>
+        <a class="lnk" href="../">ツールを使う</a>
+      </div>
+      <a class="btn-login" href="../">ログイン</a>
+      <a class="btn-cta" href="../">無料で診断する</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <span class="eyebrow">✨ SNSのジャンル・規模・フォロワーから</span>
+      <h1>最適なハッシュタグ<br><span class="hl">戦略を診断</span></h1>
+      <p class="lead">Instagram・Twitter(X)・TikTokなど、ジャンル・アカウント規模・フォロワー数・投稿目的から、いま伸びるハッシュタグの組み合わせをAIが提案。トレンド・季節性・最適タイミングまでまとめて診断します。</p>
+      <div class="stats">
+        <div class="stat"><div class="num">50,000<small style="font-size:13px">件+</small></div><div class="lbl">診断実績</div></div>
+        <div class="stat"><div class="num acc">92.4%</div><div class="lbl">満足度</div></div>
+        <div class="stat"><div class="num">登録<br style="display:none">不要</div><div class="lbl">完全無料</div></div>
+      </div>
+      <div class="hero-cta">
+        <a class="btn-big" href="../">無料で診断を始める →</a>
+        <div class="note"><b>登録不要</b>・クレジットカード不要<br>ブラウザですぐに使えます</div>
+      </div>
+    </div>
+    <div class="hero-vis">
+      <div class="hero-photo"><img src="../assets/photos/photo_09.jpg" alt="スマートフォンでSNSを使う人"></div>
+      <div class="float-card top"><img src="../assets/icons/split/01-02.png" alt="診断結果ダッシュボード：総合スコア89点と推移グラフ"></div>
+      <div class="float-card bot"><img src="../assets/icons/split/02-02.png" alt="おすすめハッシュタグ TOP10"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STRENGTHS -->
+<section class="sec" id="strengths">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">STRENGTHS</div>
+      <h2>競合にはない、4つの強み</h2>
+      <p>多次元診断・シミュレーション・履歴比較・トレンド反映。ハッシュタグ最適化に必要な機能をひとつに。</p>
+    </div>
+    <div class="legend">
+      <span><i class="dot" style="background:#22c55e"></i>高関連</span>
+      <span><i class="dot" style="background:#f59e0b"></i>中関連</span>
+      <span><i class="dot" style="background:#1D9BF0"></i>トレンド</span>
+      <span><i class="dot" style="background:#ef4444"></i>季節性</span>
+    </div>
+    <div class="grid4">
+      <div class="scard">
+        <div class="ph"><img src="../assets/photos/photo_07.jpg" alt="スマホで情報を確認する女性"></div>
+        <div class="bd">
+          <div class="ico">📊</div>
+          <h3>多次元診断</h3>
+          <p>ジャンル・規模・フォロワー・投稿目的の4軸で診断。競合にない多角的なハッシュタグ提案を実現します。</p>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="ph"><img src="../assets/photos/photo_11.jpg" alt="スマホとノートパソコンで作業する手元"></div>
+        <div class="bd">
+          <div class="ico">🎛️</div>
+          <h3>シミュレーション機能</h3>
+          <p>タグ数・バランス・投稿目的を変えながら、複数のハッシュタグ戦略を試行。効果予測スコアを比較できます。</p>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="ph"><img src="../assets/photos/photo_08.jpg" alt="ペンを持って考える女性"></div>
+        <div class="bd">
+          <div class="ico">🕑</div>
+          <h3>診断履歴を管理・比較</h3>
+          <p>過去の診断結果を保存して比較。ハッシュタグ最適化の過程を可視化し、改善のPDCAを回せます。</p>
+        </div>
+      </div>
+      <div class="scard">
+        <div class="ph"><img src="../assets/photos/photo_10.jpg" alt="SNS運用について話し合う2人"></div>
+        <div class="bd">
+          <div class="ico">📅</div>
+          <h3>トレンド・季節性を反映</h3>
+          <p>季節やトレンドのフィルタで、いまこの時期に最適なハッシュタグを提案。タイムリーな投稿を後押しします。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="sec" id="steps" style="background:linear-gradient(180deg,#eef6fd,#f4f8fc)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">HOW IT WORKS</div>
+      <h2>簡単3ステップで診断完了</h2>
+      <p>むずかしい設定は不要。3つの入力で、AIが最適なハッシュタグ戦略を提案します。</p>
+    </div>
+    <div class="steps-wrap">
+      <div class="steps">
+        <div class="step">
+          <div class="no">1</div>
+          <div class="stxt"><h4>条件を入力する</h4><p>ジャンル・アカウント規模・フォロワー数・投稿目的を選ぶだけ。</p></div>
+          <div class="simg"><img src="../assets/icons/split/01-01.png" alt="診断条件の入力フォーム"></div>
+        </div>
+        <div class="step">
+          <div class="no">2</div>
+          <div class="stxt"><h4>AIが診断・スコア化</h4><p>リーチ力・エンゲージメント・関連性・季節適合をスコアで可視化。</p></div>
+          <div class="simg"><img src="../assets/icons/split/02-03.png" alt="効果予測スコアのレーダーチャート"></div>
+        </div>
+        <div class="step">
+          <div class="no">3</div>
+          <div class="stxt"><h4>結果を活用する</h4><p>おすすめハッシュタグTOP10と最適タイミングをそのまま投稿に活用。</p></div>
+          <div class="simg"><img src="../assets/icons/split/02-02.png" alt="おすすめハッシュタグTOP10"></div>
+        </div>
+      </div>
+      <div class="cta-box">
+        <h3>今すぐ無料で<br>最適な戦略を<br>診断しよう</h3>
+        <p>登録不要・完全無料。ブラウザを開いてすぐにハッシュタグ戦略を診断できます。</p>
+        <a class="btn-big" href="../">無料で診断を始める →</a>
+        <div class="mini">所要時間 約1〜2分 / クレジットカード不要</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SNS -->
+<section class="sec" id="sns">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="sec-tag">PLATFORMS</div>
+      <h2>主要SNSに最適化対応</h2>
+      <p>プラットフォームごとに最適なハッシュタグ数・使い方が異なります。各SNSの特性に合わせて提案します。</p>
+    </div>
+    <div class="sns-grid">
+      <div class="sns">
+        <div class="badge" style="background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)">📷</div>
+        <h3>Instagram</h3>
+        <p>投稿内容に直結した具体的なタグを5〜10個。ビッグ・ミドル・ニッチのバランスを最適化。</p>
+        <span class="tagn">#推奨 5〜10個</span>
+      </div>
+      <div class="sns">
+        <div class="badge" style="background:#1D9BF0">𝕏</div>
+        <h3>Twitter (X)</h3>
+        <p>トレンドタグとニッチな専門タグを1〜2個に厳選。リーチを下げない最適な使い方を提案。</p>
+        <span class="tagn">#推奨 1〜2個</span>
+      </div>
+      <div class="sns">
+        <div class="badge" style="background:#010101">🎵</div>
+        <h3>TikTok</h3>
+        <p>FYP（おすすめ）誘導タグとコンテンツタグを3〜5個。発見性を高める組み合わせを診断。</p>
+        <span class="tagn">#推奨 3〜5個</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="sec" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head"><div class="sec-tag">USE CASES</div><h2>こんな方に使われています</h2></div>
+    <div class="gallery">
+      <img src="../assets/photos/photo_12.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_13.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_14.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_15.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_16.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_17.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_18.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_19.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_20.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_21.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_22.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_09.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_07.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_10.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_08.jpg" alt="利用シーン">
+      <img src="../assets/photos/photo_11.jpg" alt="利用シーン">
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final">
+  <div class="wrap">
+    <h2>最適なハッシュタグ戦略を、いますぐ無料で。</h2>
+    <p>ジャンル・規模・フォロワーから、伸びるハッシュタグをAIが診断します。</p>
+    <a class="btn-big" href="../" style="background:#fff;color:var(--primary)">無料で診断を始める →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="flinks">
+    <a href="../">ツールを使う</a>｜
+    <a href="https://appadaycreator.com/">AppADayCreator</a>｜
+    <a href="../privacy-policy.html">プライバシーポリシー</a>｜
+    <a href="../terms.html">利用規約</a>｜
+    <a href="../contact.html">お問い合わせ</a>
+  </div>
+  <p>© 2026 AppADayCreator. All services are free.</p>
+</footer>
+</body>
+</html>
