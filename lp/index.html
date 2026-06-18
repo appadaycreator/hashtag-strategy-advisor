@@ -14,6 +14,7 @@
 :root{
   --primary:#1D9BF0;--primary-dark:#1378c4;--accent:#F7630C;--accent-dark:#d8540a;
   --ink:#0f1722;--muted:#5b6b7c;--line:#e3eaf1;--bg:#f4f8fc;--card:#ffffff;
+  --c1:#F7630C;--c2:#8134af;--c3:#22c55e;--c4:#f59e0b;--c5:#ec4899;--c6:#06b6d4;
 }
 html{scroll-behavior:smooth}
 body{font-family:'Helvetica Neue','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7;-webkit-font-smoothing:antialiased}
@@ -37,12 +38,16 @@ a{text-decoration:none;color:inherit}
 .nav .menu{display:flex;gap:26px;align-items:center}
 
 /* Hero */
-.hero{position:relative;overflow:hidden;background:linear-gradient(160deg,#eaf5ff 0%,#f4f8fc 55%,#fff 100%)}
-.hero:before{content:"";position:absolute;top:-120px;right:-140px;width:420px;height:420px;background:radial-gradient(circle,rgba(29,155,240,.18),transparent 70%);border-radius:50%}
-.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 72px;position:relative}
-.eyebrow{display:inline-flex;align-items:center;gap:7px;background:#fff;border:1px solid var(--line);color:var(--primary);font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.04)}
+.hero{position:relative;overflow:hidden;background:linear-gradient(155deg,#fff5ec 0%,#eef6ff 42%,#f3edff 100%)}
+.hero:before{content:"";position:absolute;top:-160px;right:-120px;width:480px;height:480px;background:radial-gradient(circle,rgba(247,99,12,.22),transparent 68%);border-radius:50%;z-index:0}
+.hero:after{content:"";position:absolute;bottom:-180px;left:-140px;width:460px;height:460px;background:radial-gradient(circle,rgba(129,52,175,.18),transparent 68%);border-radius:50%;z-index:0}
+.blob{position:absolute;border-radius:30% 70% 62% 38%/42% 38% 62% 58%;filter:blur(2px);opacity:.5;z-index:0}
+.blob.b1{top:54%;right:8%;width:120px;height:120px;background:radial-gradient(circle,rgba(6,182,212,.55),transparent 70%)}
+.blob.b2{top:18%;left:46%;width:90px;height:90px;background:radial-gradient(circle,rgba(236,72,153,.5),transparent 70%)}
+.hero-in{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 80px;position:relative;z-index:1}
+.eyebrow{display:inline-flex;align-items:center;gap:7px;background:linear-gradient(90deg,#fff,#fff7f1);border:1px solid #ffe0c7;color:var(--accent);font-size:12.5px;font-weight:800;padding:7px 14px;border-radius:999px;box-shadow:0 4px 14px rgba(247,99,12,.12)}
 .hero h1{font-size:46px;line-height:1.22;font-weight:900;margin:20px 0 18px;letter-spacing:-.01em}
-.hero h1 .hl{color:var(--primary)}
+.hero h1 .hl{background:linear-gradient(90deg,var(--accent),#ff8a3d);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
 .hero p.lead{font-size:16.5px;color:var(--muted);margin-bottom:26px;max-width:520px}
 .stats{display:flex;gap:14px;margin-bottom:30px;flex-wrap:wrap}
 .stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;flex:1;min-width:120px;text-align:center;box-shadow:0 4px 14px rgba(15,23,34,.04)}
@@ -55,14 +60,46 @@ a{text-decoration:none;color:inherit}
 .note{font-size:12px;color:var(--muted)}
 .note b{color:var(--primary)}
 
-/* Hero visual */
+/* Hero visual — product dashboard mockup */
 .hero-vis{position:relative}
-.hero-photo{border-radius:20px;overflow:hidden;box-shadow:0 24px 50px rgba(15,40,80,.18);aspect-ratio:4/3;background:#dce8f2}
-.hero-photo img{width:100%;height:100%;object-fit:cover}
-.float-card{position:absolute;background:#fff;border-radius:16px;box-shadow:0 16px 40px rgba(15,40,80,.2);overflow:hidden;border:1px solid var(--line)}
-.float-card.top{top:-26px;right:-18px;width:62%}
-.float-card.bot{bottom:-30px;left:-22px;width:54%}
-.float-card img{width:100%}
+.dash{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 30px 60px rgba(15,40,80,.22);overflow:hidden;position:relative;z-index:2}
+.dash-top{display:flex;align-items:center;gap:8px;padding:12px 16px;background:linear-gradient(90deg,#f7fafd,#fff);border-bottom:1px solid var(--line)}
+.dash-dots{display:flex;gap:6px}
+.dash-dots i{width:11px;height:11px;border-radius:50%;display:block}
+.dash-dots i:nth-child(1){background:#ff5f57}.dash-dots i:nth-child(2){background:#febc2e}.dash-dots i:nth-child(3){background:#28c840}
+.dash-url{margin-left:8px;font-size:11.5px;color:var(--muted);background:#eef4fa;padding:4px 12px;border-radius:999px;font-weight:600}
+.dash-body{padding:20px 20px 22px}
+.dash-score{display:flex;align-items:center;gap:18px;margin-bottom:18px}
+.gauge{position:relative;width:104px;height:104px;flex:none}
+.gauge svg{transform:rotate(-90deg);width:104px;height:104px}
+.gauge .track{fill:none;stroke:#eef2f6;stroke-width:11}
+.gauge .prog{fill:none;stroke:url(#gg);stroke-width:11;stroke-linecap:round;stroke-dasharray:289;stroke-dashoffset:32}
+.gauge-num{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:30px;font-weight:900;color:var(--ink);line-height:1}
+.gauge-num small{font-size:11px;color:var(--muted);font-weight:700;margin-top:2px}
+.dash-badge{display:inline-block;font-size:11px;font-weight:800;color:#fff;background:linear-gradient(90deg,var(--accent),#ff8a3d);padding:4px 11px;border-radius:999px;margin-bottom:8px}
+.dash-score-info p{font-size:13px;color:var(--muted);line-height:1.55;margin-bottom:10px}
+.dash-score-info p b{color:var(--accent)}
+.chips{display:flex;gap:6px;flex-wrap:wrap}
+.chip{font-size:10.5px;font-weight:800;color:#fff;padding:3px 9px;border-radius:7px}
+.chip.ig{background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af)}.chip.tw{background:#1D9BF0}.chip.tt{background:#111}
+.dash-chart{background:#f7fafd;border:1px solid var(--line);border-radius:14px;padding:14px 14px 8px;margin-bottom:14px}
+.dash-chart-head{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:6px}
+.dash-chart-head .up{color:var(--c3);font-weight:800}
+.dash-chart svg{width:100%;height:auto;display:block}
+.dash-bars{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.bcol{background:#f7fafd;border:1px solid var(--line);border-radius:12px;padding:10px 8px 8px;text-align:center}
+.bcol .bar{height:46px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:6px}
+.bcol .bar span{width:18px;border-radius:6px;display:block}
+.bcol em{font-size:10.5px;font-style:normal;font-weight:700;color:var(--muted)}
+.bcol b{display:block;font-size:13px;font-weight:900;color:var(--ink);margin-top:2px}
+.float-mini{position:absolute;background:#fff;border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 38px rgba(15,40,80,.2);padding:11px 14px;z-index:3;display:flex;align-items:center;gap:10px}
+.float-mini .fi{width:34px;height:34px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:17px;color:#fff;flex:none}
+.float-mini .ft b{display:block;font-size:14px;font-weight:900;line-height:1.1}
+.float-mini .ft small{font-size:10px;color:var(--muted);font-weight:600}
+.float-mini.a{top:-22px;right:-16px}
+.float-mini.a .fi{background:linear-gradient(135deg,var(--c3),#16a34a)}
+.float-mini.b{bottom:-24px;left:-20px}
+.float-mini.b .fi{background:linear-gradient(135deg,var(--c2),var(--c5))}
 
 /* Section */
 .sec{padding:72px 0}
@@ -73,14 +110,14 @@ a{text-decoration:none;color:inherit}
 
 /* Strengths */
 .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-.scard{background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 22px rgba(15,23,34,.05);transition:.2s;display:flex;flex-direction:column}
-.scard:hover{transform:translateY(-5px);box-shadow:0 18px 40px rgba(29,155,240,.16)}
-.scard .ph{aspect-ratio:16/10;overflow:hidden;background:#e8f1f9}
-.scard .ph img{width:100%;height:100%;object-fit:cover}
-.scard .bd{padding:22px 20px 26px}
-.scard .ico{width:46px;height:46px;border-radius:12px;background:#eaf5ff;display:flex;align-items:center;justify-content:center;margin:-44px 0 14px;position:relative;border:3px solid #fff;box-shadow:0 6px 16px rgba(29,155,240,.2)}
+.scard{position:relative;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:0 6px 22px rgba(15,23,34,.05);transition:.2s;display:flex;flex-direction:column;padding:26px 22px 28px}
+.scard:before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--cc,var(--primary))}
+.scard:hover{transform:translateY(-5px);box-shadow:0 18px 44px rgba(15,40,80,.14)}
+.scard .ico{width:58px;height:58px;border-radius:16px;display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:27px;color:#fff;background:var(--cg,var(--primary));box-shadow:0 10px 22px rgba(15,40,80,.18)}
 .scard h3{font-size:17px;font-weight:800;margin-bottom:9px}
 .scard p{font-size:13.5px;color:var(--muted)}
+.scard .tags{margin-top:14px;display:flex;flex-wrap:wrap;gap:6px}
+.scard .tags span{font-size:10.5px;font-weight:700;color:var(--muted);background:#f1f5f9;padding:3px 9px;border-radius:999px}
 .legend{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;margin-bottom:30px}
 .legend span{font-size:12.5px;font-weight:700;color:var(--muted);display:inline-flex;align-items:center;gap:6px}
 .dot{width:10px;height:10px;border-radius:50%;display:inline-block}
@@ -165,6 +202,7 @@ footer .flinks a{margin:0 8px}
 
 <!-- HERO -->
 <section class="hero">
+  <span class="blob b1"></span><span class="blob b2"></span>
   <div class="wrap hero-in">
     <div>
       <span class="eyebrow">✨ SNSのジャンル・規模・フォロワーから</span>
@@ -181,9 +219,50 @@ footer .flinks a{margin:0 8px}
       </div>
     </div>
     <div class="hero-vis">
-      <div class="hero-photo"><img src="../assets/photos/photo_09.jpg" alt="スマートフォンでSNSを使う人"></div>
-      <div class="float-card top"><img src="../assets/icons/split/01-02.png" alt="診断結果ダッシュボード：総合スコア89点と推移グラフ"></div>
-      <div class="float-card bot"><img src="../assets/icons/split/02-02.png" alt="おすすめハッシュタグ TOP10"></div>
+      <div class="dash">
+        <div class="dash-top">
+          <div class="dash-dots"><i></i><i></i><i></i></div>
+          <span class="dash-url">hashtag-advisor.app／診断結果</span>
+        </div>
+        <div class="dash-body">
+          <div class="dash-score">
+            <div class="gauge">
+              <svg viewBox="0 0 104 104" aria-hidden="true">
+                <defs><linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#F7630C"/><stop offset="1" stop-color="#ff9d4d"/>
+                </linearGradient></defs>
+                <circle class="track" cx="52" cy="52" r="46"/>
+                <circle class="prog" cx="52" cy="52" r="46"/>
+              </svg>
+              <div class="gauge-num">89<small>SCORE</small></div>
+            </div>
+            <div class="dash-score-info">
+              <span class="dash-badge">総合スコア</span>
+              <p>あなたのハッシュタグ戦略は<br><b>上位8%</b>の効果が期待できます</p>
+              <div class="chips"><span class="chip ig">Instagram</span><span class="chip tw">X (Twitter)</span><span class="chip tt">TikTok</span></div>
+            </div>
+          </div>
+          <div class="dash-chart">
+            <div class="dash-chart-head"><span>想定リーチ推移</span><span class="up">▲ +42%</span></div>
+            <svg viewBox="0 0 300 88" aria-hidden="true" preserveAspectRatio="none">
+              <defs><linearGradient id="ag" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="rgba(29,155,240,.28)"/><stop offset="1" stop-color="rgba(29,155,240,0)"/>
+              </linearGradient></defs>
+              <path d="M0,70 L40,62 L80,66 L120,48 L160,52 L200,34 L240,28 L300,12 L300,88 L0,88 Z" fill="url(#ag)"/>
+              <polyline points="0,70 40,62 80,66 120,48 160,52 200,34 240,28 300,12" fill="none" stroke="#1D9BF0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="300" cy="12" r="4.5" fill="#F7630C"/>
+            </svg>
+          </div>
+          <div class="dash-bars">
+            <div class="bcol"><div class="bar"><span style="height:92%;background:linear-gradient(180deg,#22c55e,#16a34a)"></span></div><em>関連性</em><b>92</b></div>
+            <div class="bcol"><div class="bar"><span style="height:78%;background:linear-gradient(180deg,#1D9BF0,#1378c4)"></span></div><em>リーチ</em><b>78</b></div>
+            <div class="bcol"><div class="bar"><span style="height:85%;background:linear-gradient(180deg,#f59e0b,#d97706)"></span></div><em>季節性</em><b>85</b></div>
+            <div class="bcol"><div class="bar"><span style="height:71%;background:linear-gradient(180deg,#8134af,#ec4899)"></span></div><em>競合差</em><b>71</b></div>
+          </div>
+        </div>
+      </div>
+      <div class="float-mini a"><div class="fi">#</div><div class="ft"><b>TOP10タグ</b><small>最適タグ提案</small></div></div>
+      <div class="float-mini b"><div class="fi">⏱</div><div class="ft"><b>21:00</b><small>最適投稿時間</small></div></div>
     </div>
   </div>
 </section>
@@ -203,37 +282,29 @@ footer .flinks a{margin:0 8px}
       <span><i class="dot" style="background:#ef4444"></i>季節性</span>
     </div>
     <div class="grid4">
-      <div class="scard">
-        <div class="ph"><img src="../assets/photos/photo_07.jpg" alt="スマホで情報を確認する女性"></div>
-        <div class="bd">
-          <div class="ico">📊</div>
-          <h3>多次元診断</h3>
-          <p>ジャンル・規模・フォロワー・投稿目的の4軸で診断。競合にない多角的なハッシュタグ提案を実現します。</p>
-        </div>
+      <div class="scard" style="--cc:#1D9BF0;--cg:linear-gradient(135deg,#1D9BF0,#06b6d4)">
+        <div class="ico">📊</div>
+        <h3>多次元診断</h3>
+        <p>ジャンル・規模・フォロワー・投稿目的の4軸で診断。競合にない多角的なハッシュタグ提案を実現します。</p>
+        <div class="tags"><span>4軸スコア</span><span>レーダー分析</span></div>
       </div>
-      <div class="scard">
-        <div class="ph"><img src="../assets/photos/photo_11.jpg" alt="スマホとノートパソコンで作業する手元"></div>
-        <div class="bd">
-          <div class="ico">🎛️</div>
-          <h3>シミュレーション機能</h3>
-          <p>タグ数・バランス・投稿目的を変えながら、複数のハッシュタグ戦略を試行。効果予測スコアを比較できます。</p>
-        </div>
+      <div class="scard" style="--cc:#F7630C;--cg:linear-gradient(135deg,#F7630C,#ff9d4d)">
+        <div class="ico">🎛️</div>
+        <h3>シミュレーション機能</h3>
+        <p>タグ数・バランス・投稿目的を変えながら、複数のハッシュタグ戦略を試行。効果予測スコアを比較できます。</p>
+        <div class="tags"><span>効果予測</span><span>パターン比較</span></div>
       </div>
-      <div class="scard">
-        <div class="ph"><img src="../assets/photos/photo_08.jpg" alt="ペンを持って考える女性"></div>
-        <div class="bd">
-          <div class="ico">🕑</div>
-          <h3>診断履歴を管理・比較</h3>
-          <p>過去の診断結果を保存して比較。ハッシュタグ最適化の過程を可視化し、改善のPDCAを回せます。</p>
-        </div>
+      <div class="scard" style="--cc:#8134af;--cg:linear-gradient(135deg,#8134af,#ec4899)">
+        <div class="ico">🕑</div>
+        <h3>診断履歴を管理・比較</h3>
+        <p>過去の診断結果を保存して比較。ハッシュタグ最適化の過程を可視化し、改善のPDCAを回せます。</p>
+        <div class="tags"><span>履歴保存</span><span>推移グラフ</span></div>
       </div>
-      <div class="scard">
-        <div class="ph"><img src="../assets/photos/photo_10.jpg" alt="SNS運用について話し合う2人"></div>
-        <div class="bd">
-          <div class="ico">📅</div>
-          <h3>トレンド・季節性を反映</h3>
-          <p>季節やトレンドのフィルタで、いまこの時期に最適なハッシュタグを提案。タイムリーな投稿を後押しします。</p>
-        </div>
+      <div class="scard" style="--cc:#22c55e;--cg:linear-gradient(135deg,#22c55e,#f59e0b)">
+        <div class="ico">📅</div>
+        <h3>トレンド・季節性を反映</h3>
+        <p>季節やトレンドのフィルタで、いまこの時期に最適なハッシュタグを提案。タイムリーな投稿を後押しします。</p>
+        <div class="tags"><span>季節フィルタ</span><span>最適タイミング</span></div>
       </div>
     </div>
   </div>

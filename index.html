@@ -65,15 +65,38 @@ j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
         .nav-cta{ background:var(--accent); color:#fff!important; font-weight:800; font-size:13px; padding:9px 16px; border-radius:9px; text-decoration:none; box-shadow:0 5px 14px rgba(247,99,12,.3); }
         @media(max-width:680px){ .nav-menu .nl{ display:none; } }
         /* Hero banner (design 02) */
-        .svc-hero{ background:linear-gradient(150deg,#eaf5ff,#f4f8fc); border-bottom:1px solid var(--line); }
-        .svc-hero-in{ max-width:1000px; margin:0 auto; padding:40px 16px 44px; display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center; }
-        .svc-hero .eyebrow{ display:inline-flex; align-items:center; gap:6px; background:#fff; border:1px solid var(--line); color:var(--primary); font-size:12px; font-weight:700; padding:6px 13px; border-radius:999px; }
+        .svc-hero{ position:relative; overflow:hidden; background:linear-gradient(150deg,#fff5ec 0%,#eef6ff 45%,#f3edff 100%); border-bottom:1px solid var(--line); }
+        .svc-hero:before{ content:""; position:absolute; top:-120px; right:-90px; width:360px; height:360px; background:radial-gradient(circle,rgba(247,99,12,.2),transparent 68%); border-radius:50%; }
+        .svc-hero:after{ content:""; position:absolute; bottom:-140px; left:-110px; width:340px; height:340px; background:radial-gradient(circle,rgba(129,52,175,.16),transparent 68%); border-radius:50%; }
+        .svc-hero-in{ position:relative; z-index:1; max-width:1000px; margin:0 auto; padding:42px 16px 48px; display:grid; grid-template-columns:1.1fr .9fr; gap:32px; align-items:center; }
+        .svc-hero .eyebrow{ display:inline-flex; align-items:center; gap:6px; background:linear-gradient(90deg,#fff,#fff7f1); border:1px solid #ffe0c7; color:var(--accent); font-size:12px; font-weight:800; padding:6px 13px; border-radius:999px; }
         .svc-hero h2{ font-size:30px; font-weight:900; line-height:1.3; margin:14px 0 12px; letter-spacing:-.01em; }
-        .svc-hero h2 .hl{ color:var(--primary); }
+        .svc-hero h2 .hl{ background:linear-gradient(90deg,var(--accent),#ff8a3d); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
         .svc-hero p{ color:var(--muted); font-size:14.5px; margin-bottom:20px; }
         .svc-hero .hbtn{ display:inline-block; background:var(--accent); color:#fff; font-weight:800; font-size:15px; padding:14px 26px; border-radius:12px; text-decoration:none; box-shadow:0 9px 22px rgba(247,99,12,.32); }
-        .svc-hero .hphoto{ border-radius:18px; overflow:hidden; box-shadow:0 18px 40px rgba(15,40,80,.16); aspect-ratio:4/3; }
-        .svc-hero .hphoto img{ width:100%; height:100%; object-fit:cover; display:block; }
+        /* Hero dashboard mockup */
+        .hdash{ background:#fff; border:1px solid var(--line); border-radius:18px; box-shadow:0 24px 50px rgba(15,40,80,.18); overflow:hidden; }
+        .hdash-top{ display:flex; align-items:center; gap:7px; padding:11px 14px; background:linear-gradient(90deg,#f7fafd,#fff); border-bottom:1px solid var(--line); }
+        .hdash-top i{ width:10px; height:10px; border-radius:50%; display:block; }
+        .hdash-top i:nth-child(1){ background:#ff5f57; } .hdash-top i:nth-child(2){ background:#febc2e; } .hdash-top i:nth-child(3){ background:#28c840; }
+        .hdash-top span{ margin-left:6px; font-size:11px; color:var(--muted); font-weight:600; }
+        .hdash-body{ padding:16px 16px 18px; }
+        .hdash-row{ display:flex; align-items:center; gap:14px; margin-bottom:14px; }
+        .hgauge{ position:relative; width:84px; height:84px; flex:none; }
+        .hgauge svg{ transform:rotate(-90deg); width:84px; height:84px; }
+        .hgauge .t{ fill:none; stroke:#eef2f6; stroke-width:9; }
+        .hgauge .p{ fill:none; stroke:url(#hg); stroke-width:9; stroke-linecap:round; stroke-dasharray:226; stroke-dashoffset:25; }
+        .hgauge b{ position:absolute; inset:0; display:flex; align-items:center; justify-content:center; font-size:25px; font-weight:900; }
+        .hdash-row .meta b{ display:inline-block; font-size:10.5px; font-weight:800; color:#fff; background:linear-gradient(90deg,var(--accent),#ff8a3d); padding:3px 10px; border-radius:999px; }
+        .hdash-row .meta p{ font-size:12.5px; color:var(--muted); margin:7px 0 0; line-height:1.5; }
+        .hchips{ display:flex; gap:5px; margin-top:8px; }
+        .hchips span{ font-size:10px; font-weight:800; color:#fff; padding:3px 8px; border-radius:6px; }
+        .hchips .ig{ background:linear-gradient(135deg,#f58529,#dd2a7b,#8134af); } .hchips .tw{ background:#1D9BF0; } .hchips .tt{ background:#111; }
+        .hbars{ display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+        .hbars div{ background:#f7fafd; border:1px solid var(--line); border-radius:10px; padding:8px 6px; text-align:center; }
+        .hbars .bar{ height:36px; display:flex; align-items:flex-end; justify-content:center; }
+        .hbars .bar span{ width:14px; border-radius:5px; display:block; }
+        .hbars em{ font-style:normal; font-size:9.5px; font-weight:700; color:var(--muted); display:block; margin-top:5px; }
         @media(max-width:680px){ .svc-hero-in{ grid-template-columns:1fr; gap:22px; } .svc-hero h2{ font-size:24px; } }
         .container { max-width: 1000px; margin: 0 auto; padding: 16px; }
         .card { background: white; border-radius: 16px; padding: 24px; box-shadow: 0 6px 22px rgba(15,23,34,0.06); margin-bottom: 16px; border:1px solid var(--line); }
@@ -144,7 +167,31 @@ ins.adsbygoogle[data-ad-status="unfilled"]{display:none!important;margin:0!impor
           <p>ジャンル・アカウント規模・フォロワー数・投稿目的から、効果的なハッシュタグの組み合わせをAIが診断。投稿数・トレンド・最適タイミングまで提案します。</p>
           <a class="hbtn" href="#quiz-start">診断を始める →</a>
         </div>
-        <div class="hphoto"><img src="assets/photos/photo_11.jpg" alt="スマホとノートパソコンでSNS運用をする様子"></div>
+        <div class="hdash">
+          <div class="hdash-top"><i></i><i></i><i></i><span>hashtag-advisor.app／診断結果</span></div>
+          <div class="hdash-body">
+            <div class="hdash-row">
+              <div class="hgauge">
+                <svg viewBox="0 0 84 84" aria-hidden="true">
+                  <defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7630C"/><stop offset="1" stop-color="#ff9d4d"/></linearGradient></defs>
+                  <circle class="t" cx="42" cy="42" r="36"/><circle class="p" cx="42" cy="42" r="36"/>
+                </svg>
+                <b>89</b>
+              </div>
+              <div class="meta">
+                <b>総合スコア</b>
+                <p>あなたの戦略は<strong style="color:var(--accent)">上位8%</strong>の効果が期待できます</p>
+                <div class="hchips"><span class="ig">Instagram</span><span class="tw">X</span><span class="tt">TikTok</span></div>
+              </div>
+            </div>
+            <div class="hbars">
+              <div><div class="bar"><span style="height:92%;background:linear-gradient(180deg,#22c55e,#16a34a)"></span></div><em>関連性</em></div>
+              <div><div class="bar"><span style="height:78%;background:linear-gradient(180deg,#1D9BF0,#1378c4)"></span></div><em>リーチ</em></div>
+              <div><div class="bar"><span style="height:85%;background:linear-gradient(180deg,#f59e0b,#d97706)"></span></div><em>季節性</em></div>
+              <div><div class="bar"><span style="height:71%;background:linear-gradient(180deg,#8134af,#ec4899)"></span></div><em>競合差</em></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 <div style="background:#1378c4;padding:5px 12px;text-align:right;font-size:.78rem"><a href="/blog/" style="color:#bcdff7;text-decoration:none;font-weight:600">📖 コラム</a>&nbsp;｜&nbsp;<a href="/" style="color:#bcdff7;text-decoration:none">ホーム</a></div>
